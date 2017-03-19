@@ -103,6 +103,8 @@ class St7920: public Print {
 		//   according to datasheet,
 		//   to print characters in BIG5, send two bytes in [0xA140, 0xD75F]
 		//   to print characters in GB, send two bytes in [0xA1A0, 0xF7FF]
+		// in extended mode:
+		//   you should send two bytes: 16 bits for current cursor position
 		void sendData(uint8_t data1);
 		
 		virtual size_t write(uint8_t);
